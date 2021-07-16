@@ -1,0 +1,43 @@
+<!--
+  Created at: 07/16/2021 17:20:51 Friday
+  Modified at: 07/16/2021 05:54:51 PM Friday
+-->
+
+<!--
+  index
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data url generator</title>
+
+    <link rel="stylesheet" href="style/main.css" />
+  </head>
+  <body>
+    <main>
+      <div class="in">
+        <label>
+          Type
+        <select id="type">
+          <option value="url">URL</option>
+          <option value="html">Custom HTML</option>
+        </select>
+      </label>
+        <input type="text" id="text" placeholder="Data" />
+        <label>
+          <input type="checkbox" id="base64" checked />
+          Encode to base64
+        </label>
+        <button id="submit">Generate</button>
+      </div>
+      <div class="out">
+        <textarea id="out" placeholder="Output"></textarea>
+      </div>
+    </main>
+    <script src="script/main.js"></script>
+  </body>
+</html>

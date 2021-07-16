@@ -1,0 +1,70 @@
+/**
+ Created at: 07/16/2021 17:21:57 Friday
+ Modified at: 07/16/2021 05:55:56 PM Friday
+ **/
+/**
+ main
+ **/
+
+$primary: hsl(82, 100%, 50%)
+$bg: hsl(82, 100%, 10%)
+
+*
+  box-sizing: border-box
+  padding: 0
+  margin: 0
+  color: mix(black, $primary, 80%)
+  font-family: sans-serif
+  outline: none
+*::placeholder
+  color: mix(black, $primary, 80%)
+
+html
+  height: 100vh
+  display: flex
+  justify-content: center
+  align-items: center
+  background: $bg
+  font-size: 20px
+
+main
+  background: mix($primary, $bg, 50%)
+  display: flex
+  flex-direction: column
+  padding: 3em
+  border-radius: 1em
+  justify-content: space-between
+  animation: shadow 1s infinite alternate-reverse ease-in-out
+  box-shadow: 0 0 2em .5em $primary
+
+  .in
+    margin: 0 0 4em 0
+    display: flex
+    flex-direction: column
+    text-align: center
+    *
+      margin: .5em
+
+  input, textarea, select, button
+    background: transparent
+    border: .3em solid mix(black, $primary, 50%)
+    border-radius: .5em
+    font-size: 1em
+    padding: .5em
+    transition: .2s
+
+    &:hover, &:focus
+      border: .3em solid mix(black, $primary, 70%)
+  button
+    border: .3em solid mix($bg, $primary, 80%)
+    cursor: pointer
+    &:active
+      box-shadow: 0 0 1em black
+
+  .out
+    display: flex
+    flex-direction: column
+    text-align: center
+
+    textarea
+      resize: none
